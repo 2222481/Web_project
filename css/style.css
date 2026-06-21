@@ -99,6 +99,12 @@ body {
             background-color: rgba(245, 240, 232, 0.85);
             border-radius: 6px;
         }
+        .content-full {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(245, 240, 232, 0.85);
+            border-radius: 6px;
+        }
         .content h2 {
             color: rgb(160, 100, 50);
             border-bottom: 2px solid rgb(180, 130, 80);
