@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">       
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - VALENTINE'S CAKE BAKERY</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="toplink">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order </a>
+        <a href="contact.html">Contact Us</a>
+        <div class="toplink-right">
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <h1>Order</h1>
+        <p>Place your order today!</p>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <h2>Customize Your Order</h2>
+            <p>Select your preferred items and customize them to your liking.</p>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>  
+                <div class="form-group
+">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>   
+                </div>
+                <div class="form-group">
+                    <label for="category">Select Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">--Select a category--</option>
+                        <option value="cakes">Cakes</option>
+                        <option value="bread">Bread</option>
+                        <option value="pastries">Pastries</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="item">Select Item:</label>
+                    <select id="item" name="item" required>
+                        <option value="">--Select an item--</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="right_side_bar">
+        <h1>Opening hours</h1>
+        <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+        <p>Saturday: 7:00 AM - 9:00 PM</p>
+        <p>Sunday: 10:00 AM - 5:00 PM</p>
+
+        <h1>Quick links</h1>
+        <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Valentine's Cake Bakery. All rights reserved.</p>
+    </div>
+</body>
+</html>
