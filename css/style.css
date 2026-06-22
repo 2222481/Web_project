@@ -17,7 +17,7 @@ body {
         background-color: rgb(180, 130, 80);
         overflow: hidden;
     }
-@media (max-width: 768px) {
+ 
         .toplink a {
             float: none;
             display: block;
@@ -62,7 +62,7 @@ body {
         background-color: rgb(180, 130, 80, 0.6);
         text-align: center;
         padding: 60px 20px;
-        position: relative;
+        
     }
     .banner img {
         width: 100%;
@@ -264,6 +264,18 @@ body {
             margin: 0;
             color: #F5F0E8;
         }
-
-
+@media only screen and (max-width: 768px) {
+    .toplink a {
+        display: block;
+    }
+    .content {
+        width: 100%;
+    }
+    .right_side_bar {
+        width: 100%;
+        margin-top: 20px;
+        border-left: none;
+        border-top:3px solid rgb(180, 130, 80);
+    }
 }
+
