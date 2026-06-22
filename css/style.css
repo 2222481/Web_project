@@ -93,8 +93,6 @@ body {
         }
 
         .content {
-            float: left;
-            width: 70%;
             padding: 20px;
             background-color: rgba(245, 240, 232, 0.85);
             border-radius: 6px;
@@ -127,12 +125,10 @@ body {
 
         /* ---- SIDEBAR ------*/
         .right_side_bar {
-            float: right;
-            width: 28%;
             padding: 20px;
             background-color: rgba(245, 240, 232, 0.85);
             border-radius: 6px;
-            margin-left: 2%;
+            
         }
         .right_side_bar h3 {
             color: rgb(160, 100, 50);
