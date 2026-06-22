@@ -139,6 +139,7 @@ body {
             padding-left: 30px;
             background-color: rgba(245, 240, 232, 0.85);
             border-radius: 6px;
+            border-left: 3px solid rgb(180, 130, 80);
             
         }
         .right_side_bar h3 {
@@ -247,6 +248,7 @@ body {
         }
 
         
+
 
         /* ----FOOTER---- */
         .footer {
