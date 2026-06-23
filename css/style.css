@@ -264,8 +264,35 @@ body {
             margin: 0;
             color: #F5F0E8;
         }
+
+        /* --- MEDIA QUERIES ---- */
+        .menu-toggle {
+            display: none;
+            background: none;
+            color: #ffffff;
+            border: none;
+            padding: 14px 16px;
+            font-size: 24px;
+            cursor: pointer;
+            float: right;
+        }
 @media only screen and (max-width: 768px) {
     .toplink a {
+        display: block;
+    }
+    .toplink-right {
+        display: none;
+    }
+    .toplink.responsive .toplink-right {
+        display: block;
+        float: none;
+    }
+    .toplink.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .menu-toggle {
         display: block;
     }
     .content {
