@@ -7,32 +7,27 @@ body {
     line-height: 1.8;
     font-size: 16px;
     color: rgb(100, 70, 40);
+}
+* {
+    box-sizing: border-box; 
+}
 
-    * {
-        box-sizing: border-box;
-    }
-
-    /* ------ NAVIGATION ------ */
+    /* ------ NAVIGATION BAR ------ */
     .toplink {
-        background-color: rgb(180, 130, 80);
+        background-color: rgb(160, 100, 50);
         overflow: hidden;
     }
- 
-        .toplink a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
+    .nav-links {
+        float: left;    
     }
-    .toplink a {
+    .nav-links a {
         color: #ffffff;
         text-decoration: none;
-        float: left;
         display: block;
-        text-align: left;
         padding: 14px 16px;
+        float: left;
     }
-    .toplink a:hover {
+    .nav-links a:hover {
         background-color: #F5F0E8;
         color: rgb(180, 130, 80);
         text-decoration: none;
@@ -40,18 +35,18 @@ body {
     .toplink-right {
         float: right;
     }
-    .toplink-right a{
+    .top-right a {
         float: left;
         color: #ffffff;
-        display: block;
         text-decoration: none;
+        display: block;
         padding: 14px 16px;
     }
     .toplink-right a:hover {
         background-color: #F5F0E8;
-        color: rgb(180, 130, 80);
-        
+        color: rgb(180, 130, 80);    
     }
+
 
     /* ------ BANNER ------ */
     .banner {
@@ -276,24 +271,40 @@ body {
             cursor: pointer;
             float: right;
         }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 14px 16px;
+            float: left;
+        }
+        .nav-links a:hover {
+            background-color: #F5F0E8;
+            color: rgb(180, 130, 80);
+        }   
 @media only screen and (max-width: 768px) {
+    .nav-links a {
+        display: none;
+    }
     .toplink a {
         display: block;
     }
     .toplink-right {
-        display: none;
+        float: right;
     }
-    .toplink.responsive .toplink-right {
+    .toplink.responsive .nav-links  {
         display: block;
-        float: none;
+        width: 100%;
     }
-    .toplink.responsive a {
+    .toplink.responsive .nav-links a {
         float: none;
         display: block;
         text-align: left;
     }
     .menu-toggle {
         display: block;
+        
     }
     .content {
         width: 100%;
