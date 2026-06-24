@@ -45,3 +45,97 @@ if (categorySelect) {
         }
     });
 }
+// ---- SHOW/HIDE DELIVERY ADDRESS ----
+var deliveryRadio = document.getElementById('delivery');
+var pickupRadio = document.getElementById('pickup');
+var addressGroup = document.getElementById('addressGroup');
+
+if (addressGroup) {
+    addressGroup.style.display = 'none';
+}
+
+if (deliveryRadio) {
+    deliveryRadio.addEventListener('change', function() {
+        if (this.checked) {
+            addressGroup.style.display = 'block';
+        }
+    });
+}
+
+if (pickupRadio) {
+    pickupRadio.addEventListener('change', function() {
+        if (this.checked) {
+            addressGroup.style.display = 'none';
+        }
+    });
+}
+// ---- SIGNIN FORM VALIDATION ----
+var signinForm = document.getElementById('signinForm');
+if (signinForm) {
+    signinForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if (!email) {
+            alert('Please enter your email address');
+            return;
+        }
+        if (!password) {
+            alert('Please enter your password');
+            return;
+        }
+        if (password.length < 6) {
+            alert('Password must be at least 6 characters');
+            return;
+        }
+        alert('Sign in successful! Welcome back!');
+        signinForm.reset();
+    });
+}
+
+// ---- SIGNUP FORM VALIDATION ----
+var signupForm = document.getElementById('signupForm');
+if (signupForm) {
+    signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var fullname = document.getElementById('fullname').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var password = document.getElementById('password').value.trim();
+        var confirmPassword = document.getElementById('confirmPassword').value.trim();
+        var terms = document.getElementById('terms').checked;
+
+        if (!fullname) {
+            alert('Please enter your full name');
+            return;
+        }
+        if (!email) {
+            alert('Please enter your email address');
+            return;
+        }
+        if (!phone) {
+            alert('Please enter your phone number');
+            return;
+        }
+        if (!password) {
+            alert('Please enter a password');
+            return;
+        }
+        if (password.length < 6) {
+            alert('Password must be at least 6 characters');
+            return;
+        }
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+        if (!terms) {
+            alert('Please agree to the Terms and Conditions');
+            return;
+        }
+        alert('Account created successfully! Welcome to Valentine\'s Cake Bakery!');
+        signupForm.reset();
+    });
+}
+
