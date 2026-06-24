@@ -1,8 +1,12 @@
 function toggleMenu() {
     var toplink = document.querySelector('.toplink');
-    if (toplink.className === 'toplink') {
-        toplink.className += ' responsive';
+    var navLinks = document.querySelector('.nav-links');
+
+    if (toplink.classList.contains('responsivce')) {
+        toplink.classList.remove('responsive');
+        navLinks.style.display = 'none';
     } else {
-        toplink.className = 'toplink';
+        toplink.classList.add('responsive');
+        navLinks.style.display = 'flex';
     }
 }
