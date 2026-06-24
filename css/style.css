@@ -16,16 +16,20 @@ body {
     .toplink {
         background-color: rgb(160, 100, 50);
         overflow: hidden;
+        display: flex;
+        align-items: center;
     }
     .nav-links {
-        float: left;    
+        display: flex;
+        flex: 1;
+        order: 2;    
     }
     .nav-links a {
         color: #ffffff;
         text-decoration: none;
         display: block;
         padding: 14px 16px;
-        float: left;
+        white-space: nowrap;
     }
     .nav-links a:hover {
         background-color: #F5F0E8;
@@ -33,18 +37,31 @@ body {
         text-decoration: none;
     }
     .toplink-right {
-        float: right;
+        display: flex;
+        margin-left: auto;
+        order: 3;
     }
-    .top-right a {
+    .toplink-right a {
         float: left;
         color: #ffffff;
         text-decoration: none;
         display: block;
         padding: 14px 16px;
+        background-color: rgb(160, 100,50);
     }
     .toplink-right a:hover {
         background-color: #F5F0E8;
         color: rgb(180, 130, 80);    
+    }
+    .menu-toggle {
+        display: none;
+        background: none;
+        color: #ffffff;
+        border: none;
+        padding: 14px 16px;
+        font-size: 24px;
+        cursor: pointer;
+        order: 1;
     }
 
 
@@ -208,7 +225,8 @@ body {
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 100px;
+            padding: 10px;
+            border: 1px solid rgb(180, 130, 80);
             border-radius: 4px;
             font-size: 16px;
             font-family: Arial, Helvetica, sans-serif;
@@ -261,46 +279,26 @@ body {
         }
 
         /* --- MEDIA QUERIES ---- */
-        .menu-toggle {
-            display: none;
-            background: none;
-            color: #ffffff;
-            border: none;
-            padding: 14px 16px;
-            font-size: 24px;
-            cursor: pointer;
-            float: right;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            display: block;
-            padding: 14px 16px;
-            float: left;
-        }
-        .nav-links a:hover {
-            background-color: #F5F0E8;
-            color: rgb(180, 130, 80);
-        }   
 @media only screen and (max-width: 768px) {
     .nav-links a {
+    text-align: left;
+    padding: 14px 16px;
+    border-top: 1px solid rgba(245, 240, 232, 0.85);
+    }
+    .nav-links {
         display: none;
+        width: 100%;
+        flex-direction: column;
     }
-    .toplink a {
-        display: block;
-    }
-    .toplink-right {
-        float: right;
+    .toplink  {
+        flex-wrap: wrap;
     }
     .toplink.responsive .nav-links  {
-        display: block;
-        width: 100%;
+        display: flex;
+    
     }
-    .toplink.responsive .nav-links a {
-        float: none;
-        display: block;
-        text-align: left;
+    .toplink.right {
+        margin-left: auto;
     }
     .menu-toggle {
         display: block;
